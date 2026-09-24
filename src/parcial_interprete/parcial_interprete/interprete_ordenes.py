@@ -1,12 +1,16 @@
+import time
+
 import rclpy
 from rclpy.node import Node
 
 from parcial_interfaces.srv import InterpretarOrden
+from .clasificador import clasificar_local
 
 
 class InterpreteOrdenes(Node):
 
     def __init__(self):
+
         super().__init__('interprete_ordenes')
 
         self.servicio = self.create_service(
@@ -19,30 +23,85 @@ class InterpreteOrdenes(Node):
             'interprete_ordenes listo'
         )
 
-    def interpretar_callback(self, request, response):
-
         self.get_logger().info(
-            f'Frase recibida: {request.frase}'
+            'Modo actual: clasificador local por palabras clave'
         )
 
-        # RESPUESTA FIJA SOLO PARA PROBAR ROS 2
-        response.accion = 'recoger'
-        response.objeto = 'objeto_prueba'
-        response.color = 'rojo'
-        response.prioridad = 1
-        response.permitido = True
 
-        # Todavia no estamos usando LAYA
+    def interpretar_callback(self, request, response):
+
+        inicio = time.perf_counter()
+
+        frase = request.frase.strip()
+
+        self.get_logger().info(
+            f'Frase recibida: {frase}'
+        )
+
+        # Si llega una frase vacia, rechazamos
+        if not frase:
+
+            response.accion = 'desconocida'
+            response.objeto = 'desconocido'
+            response.color = 'desconocido'
+            response.prioridad = 0
+            response.permitido = False
+
+            response.degradado = True
+            response.metodo = 'keywords'
+
+            response.http_total_ms = -1.0
+            response.inferencia_laya_ms = -1.0
+            response.rtt_red_ms = -1.0
+
+            response.detalle = 'Frase vacia'
+
+            response.tiempo_proceso_ms = (
+                time.perf_counter() - inicio
+            ) * 1000.0
+
+            return response
+
+
+        # Clasificacion local
+        resultado = clasificar_local(frase)
+
+        response.accion = resultado['accion']
+        response.objeto = resultado['objeto']
+        response.color = resultado['color']
+        response.prioridad = int(
+            resultado['prioridad']
+        )
+        response.permitido = bool(
+            resultado['permitido']
+        )
+
+        # En este momento estamos usando solamente
+        # el clasificador local.
         response.degradado = True
-        response.metodo = 'prueba_local'
+        response.metodo = 'keywords'
 
-        response.tiempo_proceso_ms = 0.0
+        # Aun no usamos LAYA
         response.http_total_ms = -1.0
         response.inferencia_laya_ms = -1.0
         response.rtt_red_ms = -1.0
 
         response.detalle = (
-            'Respuesta fija para comprobar el servicio ROS 2'
+            'Clasificacion local por palabras clave'
+        )
+
+        response.tiempo_proceso_ms = (
+            time.perf_counter() - inicio
+        ) * 1000.0
+
+
+        self.get_logger().info(
+            'Resultado -> '
+            f'accion={response.accion}, '
+            f'objeto={response.objeto}, '
+            f'color={response.color}, '
+            f'prioridad={response.prioridad}, '
+            f'permitido={response.permitido}'
         )
 
         return response
