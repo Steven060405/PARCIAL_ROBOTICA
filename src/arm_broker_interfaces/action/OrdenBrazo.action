@@ -1,0 +1,36 @@
+# Pedido semantico para la Pregunta 2.
+# La prioridad NO la escribe manualmente el usuario:
+# la entrega /interpretar_orden a traves del orquestador.
+
+string client_id
+string accion
+string objeto
+string color
+string zona_destino
+uint8 priority
+---
+# Resultado completo del pick-and-place
+bool success
+string message
+
+float64 wait_time_s
+float64 exec_time_s
+
+# Posicion cartesiana solicitada
+float64 requested_x_mm
+float64 requested_y_mm
+float64 requested_z_mm
+
+# Posicion cartesiana alcanzada calculada mediante FK
+float64 reached_x_mm
+float64 reached_y_mm
+float64 reached_z_mm
+
+# Error euclidiano solicitado vs alcanzado
+float64 error_mm
+---
+# Feedback mientras espera/ejecuta
+string state
+string stage
+int32 queue_position
+float64 elapsed_s

@@ -5,12 +5,28 @@ import time
 
 
 class Pedido:
+    """Pedido generico administrado por la cola del broker.
+
+    tipo='joint':
+        movimiento articular tradicional de RB-2.
+
+    tipo='orden':
+        orden semantica de la Pregunta 2. La percepcion,
+        IK y planificacion se realizan solamente cuando
+        el worker la desencola.
+    """
+
     def __init__(
         self,
         goal_handle,
         client_id,
         priority,
-        joint_positions
+        joint_positions=None,
+        tipo='joint',
+        accion='',
+        objeto='',
+        color='',
+        zona_destino=''
     ):
         self.goal_handle = goal_handle
 
@@ -18,12 +34,23 @@ class Pedido:
             goal_handle.goal_id.uuid
         ).hex()[:12]
 
-        self.client_id = client_id
+        self.client_id = str(client_id)
         self.priority = int(priority)
 
-        self.joint_positions = list(
-            joint_positions
+        self.tipo = str(tipo)
+
+        # Pedido RB-2 tradicional.
+        self.joint_positions = (
+            list(joint_positions)
+            if joint_positions is not None
+            else []
         )
+
+        # Pedido semantico de Pregunta 2.
+        self.accion = str(accion)
+        self.objeto = str(objeto)
+        self.color = str(color)
+        self.zona_destino = str(zona_destino)
 
         self.t_llegada = time.time()
         self.t_inicio_ejec = None
@@ -43,7 +70,8 @@ class Pedido:
 
     def __repr__(self):
         return (
-            f'<{self.client_id} '
+            f'<{self.tipo} '
+            f'{self.client_id} '
             f'p{self.priority} '
             f'{self.goal_id}>'
         )

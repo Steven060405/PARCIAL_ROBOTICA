@@ -515,10 +515,11 @@ class InterpreteOrdenes(Node):
             ]
 
             # Prioridad:
-            # conservamos la salida cruda de LAYA
-            # para las metricas, pero la salida final
-            # se normaliza mediante reglas deterministas.
-            response.prioridad = prioridad_local
+            # REQUISITO DEL PARCIAL:
+            # la prioridad que entra al broker debe
+            # provenir directamente de la decision
+            # del modelo LAYA.
+            response.prioridad = prioridad_laya
 
             # Seguridad:
             # LAYA propone y keywords puede vetar.
@@ -540,11 +541,11 @@ class InterpreteOrdenes(Node):
 
             if veto_local:
                 response.metodo = (
-                    'laya+normalizacion_prioridad+veto_local'
+                    'laya+veto_local'
                 )
             else:
                 response.metodo = (
-                    'laya+normalizacion_prioridad'
+                    'laya'
                 )
 
             response.http_total_ms = float(

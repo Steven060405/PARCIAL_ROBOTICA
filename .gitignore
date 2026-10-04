@@ -27,3 +27,15 @@ __pycache__/
 # Rosbags locales Item 2
 resultados_item2/fifo/bag_fifo/
 resultados_item2/prioridad/bag_prioridad/
+
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# Capturas locales de camara
+camara_item2.png
