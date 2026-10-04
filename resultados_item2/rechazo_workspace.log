@@ -1,0 +1,13 @@
+Waiting for an action server to become available...
+Sending goal:
+     joint_positions:
+- 0.3
+- -2.0
+- -1.5
+- 0.0
+- 0.0
+- 0.0
+client_id: rechazo_workspace
+priority: 5
+
+Goal was rejected.

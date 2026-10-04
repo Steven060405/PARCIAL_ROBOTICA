@@ -1,0 +1,4 @@
+/home/jetson/.ros/log/python3_232933_1790727002438.log:[WARN] [1790727556.679562368] [arm_broker]: RECHAZADO [test_invalido, prioridad 100]: fuera de límites articulares: 1_Joint fuera de rango: 999.000 rad, límite [-2.93, 2.93]
+/home/jetson/.ros/log/python3_372259_1790714903553.log:[WARN] [1790717452.117588640] [arm_broker]: RECHAZADO [prueba, prioridad 1]: fuera de límites articulares: 1_Joint fuera de rango: 3.500 rad, límite [-2.93, 2.93]
+/home/jetson/.ros/log/python3_372259_1790714903553.log:[WARN] [1790717454.095360160] [arm_broker]: RECHAZADO [prueba, prioridad 1]: fuera del workspace: z = -16 mm: el efector quedaría bajo la base
+/home/jetson/.ros/log/python3_372259_1790714903553.log:[WARN] [1790717456.050019072] [arm_broker]: RECHAZADO [prueba, prioridad 1]: paso articular excesivo: 1.50 rad en 1_Joint (máximo 1.20 rad)

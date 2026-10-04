@@ -1,0 +1,66 @@
+Waiting for an action server to become available...
+Sending goal:
+     joint_positions:
+- -0.036212
+- -1.210211
+- 1.185602
+- -0.027576
+- 0.013788
+- 0.013788
+client_id: fisico_B
+priority: 5
+
+Goal accepted with ID: 80e64a3c2f4140679bdefecde1236133
+
+Feedback:
+    state: QUEUED
+queue_position: 1
+elapsed_s: 0.11563301086425781
+
+Feedback:
+    state: QUEUED
+queue_position: 1
+elapsed_s: 0.31545162200927734
+
+Feedback:
+    state: QUEUED
+queue_position: 1
+elapsed_s: 0.5156803131103516
+
+Feedback:
+    state: QUEUED
+queue_position: 1
+elapsed_s: 0.7154734134674072
+
+Feedback:
+    state: EXECUTING
+queue_position: 0
+elapsed_s: 0.004029989242553711
+
+Feedback:
+    state: EXECUTING
+queue_position: 0
+elapsed_s: 0.20566749572753906
+
+Feedback:
+    state: EXECUTING
+queue_position: 0
+elapsed_s: 0.40713024139404297
+
+Feedback:
+    state: EXECUTING
+queue_position: 0
+elapsed_s: 0.6083076000213623
+
+Feedback:
+    state: EXECUTING
+queue_position: 0
+elapsed_s: 0.8095369338989258
+
+Result:
+    success: true
+message: movimiento completado
+wait_time_s: 0.7787976264953613
+exec_time_s: 1.0100703239440918
+
+Goal finished with status: SUCCEEDED

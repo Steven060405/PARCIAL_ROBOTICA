@@ -1,0 +1,16 @@
+===== ESTADO FINAL BROKER =====
+stamp:
+  sec: 1791140686
+  nanosec: 645088928
+executing_client: ''
+executing_goal_id: ''
+executing_elapsed_s: 0.0
+queue_length: 0
+queued_goal_ids: []
+queued_clients: []
+queued_priorities: []
+queued_wait_s: []
+total_accepted: 6
+total_rejected: 3
+total_completed: 6
+---
