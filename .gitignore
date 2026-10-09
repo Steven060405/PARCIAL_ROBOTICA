@@ -8,3 +8,5 @@ __pycache__/
 registros/
 src/parcial_interprete/parcial_interprete/interprete_ordenes_antes_*.py
 src/parcial_interprete/parcial_interprete/interprete_ordenes_keywords_ok.py
+benchmark/resultados_item1_*.csv
+benchmark/resumen_item1_*.txt

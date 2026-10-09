@@ -1,0 +1,4 @@
+frase,accion_esperada,objeto_esperado,color_esperado,prioridad_esperada,permitido_esperado
+recoge el cubo rojo,recoger,cubo,rojo,1,true
+urgente recoge la botella azul inmediatamente,recoger,botella,azul,3,true
+golpea la botella roja,desconocida,botella,rojo,1,false
