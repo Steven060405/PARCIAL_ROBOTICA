@@ -6,3 +6,5 @@ __pycache__/
 *.pyo
 *.log
 registros/
+src/parcial_interprete/parcial_interprete/interprete_ordenes_antes_*.py
+src/parcial_interprete/parcial_interprete/interprete_ordenes_keywords_ok.py
