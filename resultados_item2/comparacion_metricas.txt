@@ -1,0 +1,32 @@
+
+=== fifo   (resultados_item2/fifo/queue_state.csv)
+  pedidos observados : 159
+  completados        : 160
+  espera media       : 1.40 s
+  espera p95         : 1.83 s
+  espera máxima      : 2.00 s
+  por prioridad:
+    prioridad 1: n= 39  media=  1.39s  p95=  1.74s  máx=  1.86s
+    prioridad 2: n= 40  media=  1.40s  p95=  1.75s  máx=  1.97s
+    prioridad 3: n= 40  media=  1.40s  p95=  1.84s  máx=  1.86s
+    prioridad 5: n= 40  media=  1.40s  p95=  1.83s  máx=  2.00s
+  índice de inanición: 1.86 s  (espera máxima de prioridad 1, la menos urgente)
+  goals por cliente  : {'cliente_p1': 39, 'cliente_p2': 40, 'cliente_p3': 40, 'cliente_p5': 40}
+  equidad de Jain    : 1.000
+
+=== prioridad   (resultados_item2/prioridad/queue_state.csv)
+  pedidos observados : 155
+  completados        : 160
+  espera media       : 1.06 s
+  espera p95         : 3.49 s
+  espera máxima      : 18.04 s
+  por prioridad:
+    prioridad 1: n= 35  media=  1.87s  p95=  8.73s  máx= 18.04s
+    prioridad 2: n= 40  media=  1.47s  p95=  8.56s  máx= 10.47s
+    prioridad 3: n= 40  media=  0.61s  p95=  1.72s  máx=  2.53s
+    prioridad 5: n= 40  media=  0.41s  p95=  0.64s  máx=  0.80s
+  índice de inanición: 18.04 s  (espera máxima de prioridad 1, la menos urgente)
+  goals por cliente  : {'cliente_p1': 35, 'cliente_p2': 40, 'cliente_p3': 40, 'cliente_p5': 40}
+  equidad de Jain    : 0.997
+
+Figura: resultados_item2/comparacion_politicas.png

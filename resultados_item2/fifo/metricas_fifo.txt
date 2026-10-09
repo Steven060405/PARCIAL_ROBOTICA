@@ -1,0 +1,17 @@
+
+=== fifo   (resultados_item2/fifo/queue_state.csv)
+  pedidos observados : 159
+  completados        : 160
+  espera media       : 1.40 s
+  espera p95         : 1.83 s
+  espera máxima      : 2.00 s
+  por prioridad:
+    prioridad 1: n= 39  media=  1.39s  p95=  1.74s  máx=  1.86s
+    prioridad 2: n= 40  media=  1.40s  p95=  1.75s  máx=  1.97s
+    prioridad 3: n= 40  media=  1.40s  p95=  1.84s  máx=  1.86s
+    prioridad 5: n= 40  media=  1.40s  p95=  1.83s  máx=  2.00s
+  índice de inanición: 1.86 s  (espera máxima de prioridad 1, la menos urgente)
+  goals por cliente  : {'cliente_p1': 39, 'cliente_p2': 40, 'cliente_p3': 40, 'cliente_p5': 40}
+  equidad de Jain    : 1.000
+
+Con un solo CSV no hay comparación. Graben una corrida por política.

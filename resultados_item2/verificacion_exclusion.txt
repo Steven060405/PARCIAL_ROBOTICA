@@ -1,0 +1,14 @@
+
+Archivo: resultados_item2/fifo/queue_state.csv
+Filas: 593
+Filas con un goal ejecutándose: 395
+Máxima longitud de cola: 3
+Total completados final: 160
+RESULTADO: OK — estado de ejecución consistente
+
+Archivo: resultados_item2/prioridad/queue_state.csv
+Filas: 583
+Filas con un goal ejecutándose: 435
+Máxima longitud de cola: 3
+Total completados final: 160
+RESULTADO: OK — estado de ejecución consistente

@@ -1,0 +1,70 @@
+
+============================================================
+FIFO
+============================================================
+
+cliente_p1
+  goals       : 40
+  espera media: 1.452 s
+  espera p95  : 1.860 s
+  espera max  : 2.040 s
+
+cliente_p2
+  goals       : 40
+  espera media: 1.477 s
+  espera p95  : 1.880 s
+  espera max  : 2.130 s
+
+cliente_p3
+  goals       : 40
+  espera media: 1.474 s
+  espera p95  : 1.850 s
+  espera max  : 1.930 s
+
+cliente_p5
+  goals       : 40
+  espera media: 1.482 s
+  espera p95  : 1.930 s
+  espera max  : 2.030 s
+
+RESUMEN GLOBAL
+  goals       : 160
+  espera media: 1.471 s
+  espera p95  : 1.880 s
+  espera max  : 2.130 s
+  ejec media  : 0.490 s
+
+============================================================
+PRIORIDAD
+============================================================
+
+cliente_p1
+  goals       : 40
+  espera media: 1.706 s
+  espera p95  : 8.750 s
+  espera max  : 18.170 s
+
+cliente_p2
+  goals       : 40
+  espera media: 1.540 s
+  espera p95  : 8.570 s
+  espera max  : 10.470 s
+
+cliente_p3
+  goals       : 40
+  espera media: 0.704 s
+  espera p95  : 1.820 s
+  espera max  : 2.660 s
+
+cliente_p5
+  goals       : 40
+  espera media: 0.494 s
+  espera p95  : 0.640 s
+  espera max  : 0.910 s
+
+RESUMEN GLOBAL
+  goals       : 160
+  espera media: 1.111 s
+  espera p95  : 3.640 s
+  espera max  : 18.170 s
+  ejec media  : 0.558 s

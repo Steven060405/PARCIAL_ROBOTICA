@@ -23,3 +23,7 @@ benchmark/frases_prueba_*.csv
 # Python
 __pycache__/
 *.pyc
+
+# Rosbags locales Item 2
+resultados_item2/fifo/bag_fifo/
+resultados_item2/prioridad/bag_prioridad/
