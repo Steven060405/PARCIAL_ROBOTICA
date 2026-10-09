@@ -10,3 +10,16 @@ src/parcial_interprete/parcial_interprete/interprete_ordenes_antes_*.py
 src/parcial_interprete/parcial_interprete/interprete_ordenes_keywords_ok.py
 benchmark/resultados_item1_*.csv
 benchmark/resumen_item1_*.txt
+
+# Respaldos locales Item 2
+src/arm_broker/arm_broker/*_base_profesor.py
+src/arm_broker/arm_broker/broker_antes_*.py
+src/arm_broker/arm_broker/broker_*_ok.py
+
+# CSV temporales de pruebas
+benchmark/frases_50_antes_set_prueba.csv
+benchmark/frases_prueba_*.csv
+
+# Python
+__pycache__/
+*.pyc
